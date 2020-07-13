@@ -1,0 +1,159 @@
+.form {
+  position: relative;
+  margin-top: 70px;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  &__input,
+  &__submit {
+    width: 440px;
+    height: 100px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  &__input {
+    border: 3px solid #a45dcb;
+    padding: 0 30px;
+    background-color: inherit;
+    font-size: 20px;
+    color: white;
+    &:focus {
+      border: 3px solid #ffc329;
+    }
+  }
+  &__submit {
+    margin-top: 14px;
+    background-color: #ffc329;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      border: 3px solid #a45dcb;
+    }
+  }
+}
+
+.error-span {
+  font-size: 14px;
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  &-active {
+    opacity: 1;
+  }
+}
+
+.form__input-error {
+  border: 3px solid red;
+}
+
+input::-moz-placeholder {
+  color: #a45dcb;
+}
+
+input::-webkit-input-placeholder {
+  color: #a45dcb;
+}
+
+.disable {
+  background-color: #7fff00;
+}
+
+.PhoneInput {
+  padding-left: 0;
+}
+
+.PhoneInputCountry {
+  margin-left: 35px;
+}
+
+.PhoneInputInput {
+  position: absolute;
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
+  color: white;
+  padding-left: 85px;
+  width: 440px;
+  height: 100px;
+  border-radius: 50px;
+  margin-left: -3px;
+  box-sizing: border-box;
+  &:focus {
+    border: 3px solid #ffc329;
+    margin-left: -3px;
+  }
+}
+
+input:-webkit-autofill {
+  padding-left: 50px;
+  box-shadow: inset 0 0 0 50px #a45dcb;
+  -webkit-text-fill-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    align-items: center;
+    &__input,
+    &__submit {
+      width: 90%;
+    }
+  }
+  .PhoneInputInput {
+    width: 90%;
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
